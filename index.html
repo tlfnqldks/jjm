@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jho's 개인홈페이지</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    
+    <!-- 구글폰트 : notosankr -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- 구글폰트 : Hahmlet -->
+    <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;400&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/common.css" type="text/css">
+    <link rel="stylesheet" href="css/header.css" type="text/css">
+    <link rel="stylesheet" href="css/title.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/footer.css" type="text/css">
+    <link rel="stylesheet" href="css/responsive.css" type="text/css">
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+                // 헤더 버튼 영역이동
+                //홈
+                $("header ul.gnb li:nth-child(1) a").click(
+                    function(){
+                    $("html,body").animate({scrollTop:"0px"},1500); 
+                    return false; 
+                    }
+                );
+                // 어바웃
+                $("header ul.gnb li:nth-child(2) a").click(
+                    function(){
+                    $("html,body").animate({scrollTop:$(window).height()},1500); 
+                    return false; 
+                    }
+                );
+                // 포트폴리오
+                $("header ul.gnb li:nth-child(3) a").click(
+                    function(){
+                    $("html,body").animate({scrollTop:$(window).height()*2-20},1500); 
+                    return false; 
+                    }
+                );
+                // 컨택트
+                $("header ul.gnb li:nth-child(4) a").click(
+                    function(){
+                    $("html,body").animate({scrollTop:$(window).height()*3+750},1500); 
+                    return false; 
+                    }
+                );  
+                $("header ul.gnb li:nth-child(1) a").click(
+                    function(){
+                        $("header ul.gnb li a").removeClass();
+                    }
+                );
+            
+            $(window).scroll(function(){
+                // 타이틀영역 
+                if($(window).scrollTop()<$("#title").height()){ 
+                    $("header ul.gnb li a").removeClass("gnbColor");
+                }
+                // 어바웃영역 
+                if($(window).scrollTop()>=$("#title").height()){ 
+                    $("header ul.gnb li:nth-child(2) a").addClass("gnbColor"); 
+                    $("header ul.gnb li a").not("header ul.gnb li:nth-child(2) a").removeClass("gnbColor");
+                    // 제목
+                if($(window).scrollTop()>=$("#title").height()/2){
+                    $("#about .subject").addClass("current");
+                    }
+                if($(window).scrollTop() < $("#title").height()/2){
+                    $("#about .subject").removeClass("current");  
+                    }
+                }
+                // 포트폴리오 
+                if($(window).scrollTop()>=$("#title").height()+$("#about").height()){
+                    $("header ul.gnb li:nth-child(3) a").addClass("gnbColor");
+                    $("header ul.gnb li a").not("header ul.gnb li:nth-child(3) a").removeClass("gnbColor");
+                if($(window).scrollTop()>=$("#title").height()+$("#about").height()/2){
+                    $("#portfolio .subject").addClass("current");
+                    }
+                if($(window).scrollTop() < $("#title").height()+$("#about").height()/2){
+                    $("#portfolio .subject").removeClass("current");
+                    }
+                }
+                // 컨택트 
+                if($(window).scrollTop()>=$("#title").height()+$("#about").height()+$("#portfolio").height()){
+                    $("header ul.gnb li:nth-child(4) a").addClass("gnbColor"); 
+                    $("header ul.gnb li a").not("header ul.gnb li:nth-child(4) a").removeClass("gnbColor");
+                if($(window).scrollTop()>=$("#title").height()+$("#about").height()+$("#portfolio").height()/2){
+                    $("#contact .subject").addClass("current");
+                    }
+                if($(window).scrollTop() < $("#title").height()+$("#about").height()+$("#portfolio").height()/2){
+                    $("#contact .subject").removeClass("current");
+                    }
+                }
+
+                
+
+            });
+        
+        }
+    );
+    </script>
+
+</head>
+<body>
+    <!-- 상단영역 -->
+    <header>
+        <div class="wrap">
+            <h1 class="h1"><a href="">JJM PORTFOLIO</a></h1>
+            <ul class="gnb">
+                <li><a href="">HOME</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">PORTFOLIO</a></li>
+                <li><a href="">CONTACT</a></li>
+            </ul>
+            <a class="allmenu" href="">전체메뉴보기<span class="nemo"></span></a>
+        </div>
+    </header>
+
+    <!-- 타이틀영역 -->
+    <div id="title">
+        <div class="wrap">
+            <div class="hgroup">
+                <h3 class="h3">Creativity is just connecting things</h3>
+                <h4 class="h4">- Steve Jobs</h4>
+            </div>
+            <div class="scroll-down"></div>
+        </div>
+    </div>
+
+    <!-- 내용영역 -->
+    <main>
+        <section id="about">
+            <div class="wrap">
+                <h2 class="h2 subject">ABOUT</h2>
+                <div class="me">
+                    <div class="profile">
+                        <h3 class="h3">Profile</h3>
+                        <p>Name : <span class="de">조정민 Jho JeongMin</span></p>
+                        <p>Brithday : <span class="de">1995.01.31</span></p>
+                        <p>PHONE : <span class="de">010-8810-2656</span></p>
+                        <p>E-mail : <span class="de">tlfnqldks@naver.com</span></p>
+                        <p>Address : <span class="de">서울시 광진구 구의동</span></p>
+                        <p>Completion : <span class="de">2022.01 ~ 2022.06 국가기간전략산업직종훈련(760H)</span></p>
+                        <p><span class="de">프론트엔드 개발자로 가는 UI/UX반응형 웹디자인&웹퍼블리셔</span></p>
+                    </div>
+                    <div class="skill">
+                        <h3 class="h3">Skill</h3>
+                        <div class="sk">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JS</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio">
+            <div class="wrap">
+                <h2 class="h2 subject">PORTFOLIO</h2>
+                <ul class="list">
+                    <li>
+                        <h3 class="h3">한진칼 코딩</h3>
+                        <p>한진칼 코딩작업물입니다</p>
+                        <a href="https://tlfnqldks.github.io/pf1/" target="_blink"><img src="img/pf1.png" width="300" height="300" alt=""></a>
+                        <span>메인페이지</br>HTML, CSS</span>
+                    </li>
+                    <li>
+                        <h3 class="h3">개별코딩2</h3>
+                        <p>개별 코딩작업물입니다</p>
+                        <a href="https://tlfnqldks.github.io/pf2/" target="_blink"><img src="img/pf2.png" width="300" height="300" alt=""></a>
+                        <span>메인페이지</br>HTML, CSS</span>
+                    </li>
+                    <li>
+                        <h3 class="h3">투썸플레이스 코딩</h3>
+                        <p>투썸플레이스 코딩작업물입니다</p>
+                        <a href="https://tlfnqldks.github.io/pf3/" target="_blink"><img src="img/pf3.png" width="300" height="300" alt=""></a>
+                        <span>메인페이지</br>HTML, CSS</span>
+                    </li>
+                    <li>
+                        <h3 class="h3">개별코딩4</h3>
+                        <p>개별 코딩작업물입니다</p>
+                        <a href="https://tlfnqldks.github.io/pf4/" target="_blink"><img src="img/pf4.png" width="300" height="300" alt=""></a>
+                        <span>메인페이지</br>HTML, CSS</span>
+                    </li>
+                    <li>
+                        <h3 class="h3">삼성전자 코딩</h3>
+                        <p>삼성전자 코딩작업물입니다</p>
+                        <a href="https://tlfnqldks.github.io/pf5/" target="_blink"><img src="img/pf5.png" width="300" height="300" alt=""></a>
+                        <span>메인페이지, 서브페이지</br>HTML, CSS, JS, 반응형</span>
+                    </li>
+                    <li>
+                        <h3 class="h3">브랜드엑스 코딩</h3>
+                        <p>브랜드엑스 코딩작업물입니다</p>
+                        <a href="https://tlfnqldks.github.io/pf6/" target="_blink"><img src="img/pf6.png" width="300" height="300" alt=""></a>
+                        <span>메인페이지</br>HTML, CSS, JS, 반응형</span>
+                    </li>
+                    <li>
+                        <h3 class="h3">윤현몰 코딩</h3>
+                        <p>윤현몰 코딩작업물입니다</p>
+                        <a href="https://tlfnqldks.github.io/pf7/" target="_blink"><img src="img/pf7.png" width="300" height="300" alt=""></a>
+                        <span>메인페이지</br>Bootstrap, HTML</br>CSS, JS, 반응형</span>
+                    </li>
+                    <li>
+                        <h3 class="h3">Cafe24 쇼핑몰</h3>
+                        <p>Cafe24 쇼핑몰 작업물입니다</p>
+                        <a href="https://tlfnqldks.cafe24.com/" target="_blink"><img src="img/pf8.png" width="300" height="300" alt=""></a>
+                        <span>메인페이지</br>Cafe24를 이용한 작업물입니다</span>
+                    </li>
+                    <li>
+                        <h3 class="h3">준비중</h3>
+                        <p>작업 준비중입니다</p>
+                        <a><img src="img/ready.png" width="300" height="300" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="wrap">
+                <h2 class="h2 subject">CONTACT</h2>
+                <div class="info">
+                    <h3 class="h3">Thanks for watching</h3>
+                    <p>문의사항이 있으시다면 편하게 연락주시기 바랍니다.</p>
+                    <p>우측 양식이나 하단 연락처로 문의 보내주시면 확인 후 빠른 연락드리겠습니다.</p>
+                    <p>PHONE : 010-8810-2656</p>
+                    <p>E-mail : tlfnqldks@naver.com</p>
+                </div>
+                <div class="send">
+                    <div class="mesa">
+                        <h3 class="h3">SEND</h3>
+                        <input type="text" id="name" name="name" placeholder="이름(Name)" required="">
+                        <input type="text" id="phone" name="phone" placeholder="연락처(PHONE)" required="">
+                        <input type="text" id="email" name="email" placeholder="이메일(E-mail)" required="">
+                        <input type="text" id="message" name="message" rows="10" cols="300" placeholder="내용(Message)" required="">
+                        <input type="button" id="send" name="send" value="전송(Send)">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="padding-t10 padding-b10">
+        <div class="wrap">
+            <div>
+                <p class="copyright">© Copyright 2022. <span class="strong">조정민 Jho Jung Min</span>. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

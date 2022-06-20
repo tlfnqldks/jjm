@@ -1,0 +1,14 @@
+footer {
+  background-color: #222222db;
+  position: relative;
+}
+footer .wrap {
+  color: #fff;
+  text-align: center;
+}
+footer p{
+  
+}
+footer .strong{
+  font-weight: 700;
+}

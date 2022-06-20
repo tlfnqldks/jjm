@@ -1,0 +1,374 @@
+@media screen and (max-width:768px){
+/*  common  */
+  html, body{
+  }
+  .h2{
+    font-size: calc(95px * 0.5);
+  }
+/*  헤더  */
+  header .wrap{
+    height: 60px;
+  }
+  header h1 a{
+    font-size: calc(40px * 0.7);
+    text-align: center;
+    padding: initial;
+  }
+  header ul.gnb{
+    display: none;
+  }
+/*  타이틀  */
+  #title{
+    margin-top: 60px;
+    height: auto;
+  }
+  #title .wrap{
+    height: 67.594vw;
+  }
+  #title .hgroup{
+    top: 35%;
+  }
+  #title h3{
+    font-size: 22px;
+    text-align: center;
+  }
+  #title h4{
+    font-size: 19px;
+    float: initial;
+    text-align: center;
+  }
+  .scroll-down{
+    width: 5.46875vw;
+    height: 8.333333333333333vw;
+    bottom: 2.604166666666667vw;
+  }
+/*  어바웃  */
+  #about .wrap{
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  #about h2{
+    text-align: center;
+    font-size: 30px;
+  }
+  .h2::after {
+    font-size: calc(25px * 0.5);
+  }
+  #about .me{
+    margin-top: 20px;
+    margin-left: 0;
+    display: inline-table;
+  }
+  #about .profile{
+    padding: calc(50px * 0.7);
+  }
+  #about .skill{
+    float: left;
+    height: 230px;
+    padding: calc(50px * 0.7);
+    padding-top: 20px;
+  }
+  #about h3{
+    font-size: calc(40px * 0.6);
+    margin-bottom: 20px;
+  }
+  #about p{
+    font-size: calc(24px * 0.53);
+    line-height: 2.5;
+  }
+  #about .skill div.sk::before {
+    margin-left: initial;
+    width: calc(600px * 0.5);
+  }
+/*  포트폴리오  */
+  #portfolio h2{
+    text-align: center;
+    font-size: 30px;
+    top: -135px;
+    position: absolute;
+    left: 25%;
+  }
+  #portfolio ul.list{
+    padding-top: 30px;
+    margin-bottom: 10px;
+  }
+  #portfolio ul.list > li{
+    width: 45%;
+    height: 300px;
+  }
+  #portfolio ul.list li h3{
+    font-size: calc(21px * 0.7);
+  }
+  #portfolio ul.list > li p{
+    font-size: 13px;
+    white-space: nowrap;
+  }
+  #portfolio ul.list > li:nth-child(3) p{
+    font-size: 12px;
+  }
+  #portfolio ul.list li a{
+    width: 130px;
+    height: 200px;
+  }
+  #portfolio ul.list li img{
+    height: 210px;
+  }
+  #portfolio ul.list li:nth-child(6) img{
+    width: 150px;
+    height: 200px;
+    top: 80px;
+    left: calc(50% - 75px);
+  }
+  #portfolio ul.list li span{
+    font-size: 14px;
+    left: 31%;
+  }
+  #portfolio ul.list li:nth-child(5) span{
+    left: 15%;
+    font-size: 13px;
+  }
+/*  컨택트  */
+  #contact .wrap{
+    margin-top: 30px;
+  }
+  #contact .wrap h2{
+    text-align: center;
+    font-size: 30px;
+  }
+  #contact div.info{
+    margin: initial;
+    width: auto;
+    padding-top: 40px;
+    height: 320px;
+  }
+  #contact div.info h3{
+    font-size: calc(40px * 0.7);
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  #contact div.info p{
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: -0.2px;
+  }
+  #contact div.send{
+    float: initial;
+    width: 430px;
+    margin-top: initial;
+    overflow: hidden;
+    height: auto;
+  }
+  #contact div.mesa{
+    padding-top: 20px;
+  }
+  #contact div.mesa h3{
+    font-size: calc(40px * 0.6);
+    margin-bottom: 30px;
+  }
+  #contact input{
+    width: 310px;
+    line-height: initial;
+  }
+  #contact input[name="message"]{
+    height: calc(200px * 0.7);
+  }
+  #contact input[name="send"]{
+    width: 335px;
+  }
+/*  푸터  */
+  footer{
+    bottom: -180px;
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width:1024px){
+/*  common  */
+  main{
+    height: 300%;
+  }
+/*  헤더  */
+  header{
+    height: auto;
+  }
+  header .wrap{
+    height: 70px;
+  }
+  header h1 a{
+    font-size: 40px;
+  }
+  header ul.gnb{
+    display: none;
+  }
+/*  타이틀  */
+  #title{
+    margin-top: 60px;
+    height: auto;
+  }
+  #title .wrap{
+    height: 67.594vw;
+  }
+  #title .hgroup{
+    top: 40%;
+    left: 7%;
+  }
+  #title h3{
+    font-size: 37px;
+  }
+  #title h4{
+    text-align: center;
+    float: initial;
+  }
+  .scroll-down{
+    width: 3.469vw;
+    height: 5.333vw;
+    bottom: 65.604vw;
+  }
+/*  어바웃  */
+  #about .wrap{
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  #about h2{
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 10px;
+  }
+  .h2::after {
+    font-size: calc(25px * 0.6);
+  }
+  #about .me{
+    margin-top: 20px;
+    margin-left: 0;
+    display: inline-table;
+  }
+  #about .profile{
+    padding: calc(50px * 0.7);
+    padding-top: 50px;
+  }
+  #about .skill{
+    float: left;
+    height: 270px;
+    padding: calc(50px * 0.7);
+    padding-top: 20px;
+  }
+  #about h3{
+    font-size: calc(40px * 0.8);
+    margin-bottom: 30px;
+  }
+  #about p{
+    font-size: calc(24px * 0.8);
+    line-height: 2.5;
+  }
+  #about .skill div.sk::before {
+    margin-left: calc(50% - 150px);
+  }
+/*  포트폴리오  */
+  #portfolio{
+    margin-top: 100px;
+  }
+  #portfolio .wrap{
+    text-align: center;
+    font-size: 45px;
+  }
+  #portfolio h2{
+    text-align: center;
+    font-size: 45px;
+    top: -155px;
+    position: absolute;
+    left: 30%;
+  }
+  #portfolio ul.list{
+    padding-top: 30px;
+    margin-bottom: 10px;
+    justify-content: space-evenly;
+  }
+  #portfolio ul.list > li{
+    width: 45%;
+    height: 350px;
+  }
+  #portfolio ul.list li h3{
+    font-size: calc(21px * 0.9);
+  }
+  #portfolio ul.list > li p{
+    font-size: 16px;
+    white-space: nowrap;
+  }
+  #portfolio ul.list > li:nth-child(3) p{
+    font-size: 15px;
+  }
+  #portfolio ul.list li a{
+    width: 200px;
+    height: 225px;
+  }
+  #portfolio ul.list li img{
+    height: 230px;
+  }
+  #portfolio ul.list li:nth-child(6) img{
+    width: 220px;
+    height: 230px;
+    top: 95px;
+    left: calc(50% - 110px);
+  }
+  #portfolio ul.list li span{
+    font-size: 20px;
+    left: 35%;
+  }
+  #portfolio ul.list li:nth-child(5) span{
+    left: 23%;
+    font-size: 18px;
+  }
+/*  컨택트  */
+  #contact .wrap{
+    margin-top: 30px;
+  }
+  #contact .wrap h2{
+    text-align: center;
+    font-size: 45px;
+  }
+  #contact div.info{
+    margin: initial;
+    width: 100%;
+    padding-top: 40px;
+    height: 320px;
+  }
+  #contact div.info h3{
+    font-size: calc(40px * 0.9);
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  #contact div.info p{
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: -0.2px;
+  }
+  #contact div.send{
+    float: initial;
+    width: 100%;
+    margin-top: initial;
+    overflow: hidden;
+    height: auto;
+  }
+  #contact div.mesa{
+    padding-top: 20px;
+  }
+  #contact div.mesa h3{
+    font-size: calc(40px * 0.8);
+    margin-bottom: 30px;
+  }
+  #contact input{
+    width: 100%;
+    line-height: initial;
+  }
+  #contact input[name="message"]{
+    height: calc(200px * 0.7);
+  }
+  #contact input[name="send"]{
+    width: 103.3%;
+  }
+/*  푸터  */
+  footer{
+    bottom: -60px;
+    font-size: 17px;
+  }
+}
